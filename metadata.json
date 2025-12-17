@@ -1,0 +1,5 @@
+{
+  "name": "ElectroResQ",
+  "description": "An AI-powered Electronics Vision Analysis Agent designed to inspect PCB images, identify components, assess damage, and provide valuation estimates.",
+  "requestFramePermissions": []
+}

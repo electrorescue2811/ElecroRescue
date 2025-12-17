@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroRescue.AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Default Dark Theme */
+        --bg-app: #020617;       /* slate-950 */
+        --bg-panel: #0f172a;     /* slate-900 */
+        --bg-card: #1e293b;      /* slate-800 */
+        --border: #334155;       /* slate-700 */
+        --text-muted: #64748b;   /* slate-500 */
+        --text-sec: #94a3b8;     /* slate-400 */
+        --text-prim: #cbd5e1;    /* slate-300 */
+        --text-high: #f8fafc;    /* slate-200/white */
+        --accent: #3b82f6;       /* blue-500 */
+      }
+
+      body.theme-white {
+        --bg-app: #f1f5f9;       /* slate-100 */
+        --bg-panel: #ffffff;     /* white */
+        --bg-card: #e2e8f0;      /* slate-200 */
+        --border: #cbd5e1;       /* slate-300 */
+        --text-muted: #94a3b8;   /* slate-400 */
+        --text-sec: #475569;     /* slate-600 */
+        --text-prim: #1e293b;    /* slate-800 */
+        --text-high: #0f172a;    /* slate-900 */
+      }
+
+      body.theme-green {
+        --bg-app: #022c22;       /* emerald-950 */
+        --bg-panel: #064e3b;     /* emerald-900 */
+        --bg-card: #065f46;      /* emerald-800 */
+        --border: #047857;       /* emerald-700 */
+        --text-muted: #34d399;   /* emerald-400 */
+        --text-sec: #6ee7b7;     /* emerald-300 */
+        --text-prim: #a7f3d0;    /* emerald-200 */
+        --text-high: #ecfdf5;    /* emerald-50 */
+        --accent: #10b981;       /* emerald-500 */
+      }
+
+      body.theme-cherry {
+        --bg-app: #4c0519;       /* rose-950 */
+        --bg-panel: #881337;     /* rose-900 */
+        --bg-card: #9f1239;      /* rose-800 */
+        --border: #be123c;       /* rose-700 */
+        --text-muted: #fb7185;   /* rose-400 */
+        --text-sec: #fda4af;     /* rose-300 */
+        --text-prim: #ffe4e6;    /* rose-100 */
+        --text-high: #fff1f2;    /* rose-50 */
+        --accent: #f43f5e;       /* rose-500 */
+      }
+
+      body.theme-midnight {
+        --bg-app: #000000;
+        --bg-panel: #0a0a0a;
+        --bg-card: #171717;
+        --border: #262626;
+        --text-muted: #525252;
+        --text-sec: #a3a3a3;
+        --text-prim: #d4d4d4;
+        --text-high: #ffffff;
+        --accent: #6366f1;       /* indigo-500 */
+      }
+
+      body {
+        background-color: var(--bg-app);
+        color: var(--text-high);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              // Map standard names to CSS variables for dynamic theming
+              slate: {
+                950: 'var(--bg-app)',
+                900: 'var(--bg-panel)',
+                800: 'var(--bg-card)',
+                700: 'var(--border)',
+                600: 'var(--text-muted)', // slightly darker muted
+                500: 'var(--text-muted)',
+                400: 'var(--text-sec)',
+                300: 'var(--text-prim)',
+                200: 'var(--text-high)',
+              },
+              // Remap white to high contrast text so "text-white" works in light mode (becomes dark)
+              white: 'var(--text-high)',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "firebase/app": "https://esm.sh/firebase@^12.6.0/app",
+    "firebase/auth": "https://esm.sh/firebase@^12.6.0/auth",
+    "firebase/analytics": "https://esm.sh/firebase@^12.6.0/analytics",
+    "firebase/firestore": "https://esm.sh/firebase@^12.6.0/firestore",
+    "firebase/storage": "https://esm.sh/firebase@^12.6.0/storage",
+    "firebase/": "https://esm.sh/firebase@^12.6.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
