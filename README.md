@@ -84,7 +84,7 @@ The mission is simple: **Reduce e-waste by helping users reuse, repair, and re-g
 
 ```bash
 # Clone the repository
-git clone https://github.com/rajamannn/ElectroRescue
+git clone https://github.com/electrorescue2811/ElectroRescue
 
 # Navigate into project directory
 cd ElectroRescue
